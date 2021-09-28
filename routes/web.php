@@ -24,5 +24,12 @@ Route::get('/funrut', function () {
     return "soy un hola mundo desde una ruta";
 });
 
+Route::get('notas/crear', 'NoteController@create')
+    ->name('notes.create');
+    Route::get('/', 'NoteController@index')->name('notes');
+    Route::get('notas/{id}', 'NoteController@show')->name('notes.show');
+    Route::get('notas/crear', 'NoteController@create')->name('notes.create');
+    // store...
+    Route::get('notas/{id}/editar', 'NoteController@edit')->name('notes.edit');
 
 
