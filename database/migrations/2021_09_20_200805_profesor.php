@@ -43,4 +43,8 @@ class CreatePostsTable extends Migration
     {
         Schema::dropIfExists('posts');
     }
+   public function store(Request $request){
+
+        
+    }
 }
