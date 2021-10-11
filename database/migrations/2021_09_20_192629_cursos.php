@@ -31,4 +31,8 @@ class CreateCategoriesTable extends Migration
     {
         Schema::dropIfExists('categories');
     }
+    public function store(Request $request){
+
+        
+    }
 }
