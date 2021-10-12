@@ -1,16 +1,20 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
     /**
-     * Get the post that owns the comment.
+     * Get the phone associated with the user.
      */
+    public function phone()
+    {
+        return $this->hasOne(Phone::class);
+    }
     public function post()
     {
-        return $this->belongsTo('App\Post');
+        return $this->belongsTo(Post::class);
     }
 }
