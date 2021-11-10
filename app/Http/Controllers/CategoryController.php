@@ -31,14 +31,14 @@ class CategoryController extends Controller
 
             'name'=>$request->name
         ]);
-        return back();
+        return redirect('/category')->with('mesage', 'la categoria se ha agregado exitosamente!');
 
     }
     /* eliminacion de */
     public function delete(Category $category){
 
         $category->delete();
-        return back();
+        return redirect('/category')->with('mesage', 'la categoria se ha borrado exitosamente!');
 
 
     }
