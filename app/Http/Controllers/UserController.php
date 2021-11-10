@@ -23,6 +23,7 @@ class UserController extends Controller
 
     }
     public function store(){
+        return redirect('/category')->with('mesage', 'la categoria se ha agregado exitosamente!');
 
     }
     /* metododo delete */
