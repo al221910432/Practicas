@@ -38,7 +38,7 @@ class CategoryController extends Controller
     public function delete(Category $category){
 
         $category->delete();
-        return redirect('/category')->with('mesage', 'la categoria se ha borrado exitosamente!');
+        return redirect('/category')->with('mesagedel', 'la categoria se ha borrado exitosamente!');
 
 
     }
